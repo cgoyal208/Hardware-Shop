@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#102b45" />
+    <meta name="description" content="Quality tools, electrical supplies, plumbing products and building materials at honest prices." />
+    <title>Forge & Field Hardware | Built on Quality</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="products.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="loader" id="loader" aria-label="Loading store">
+      <div class="loader-mark"><i data-lucide="hammer"></i></div>
+      <span>FORGE <b>&</b> FIELD</span>
+      <div class="loader-line"><span></span></div>
+    </div>
+
+    <div class="announcement">
+      <span>Built for the work that matters.</span>
+      <span class="announcement-right"><i data-lucide="truck"></i> Local delivery available <b>·</b> <a href="#contact">Ask us today</a></span>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Forge and Field home">
+        <span class="brand-mark"><i data-lucide="hammer"></i></span>
+        <span class="brand-copy"><strong>FORGE <em>&</em> FIELD</strong><small>HARDWARE & SUPPLY</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">Our Shop</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <label class="search-box" for="site-search"><i data-lucide="search"></i><input id="site-search" type="search" placeholder="Search tools, brands..." autocomplete="off" /><kbd>/</kbd></label>
+        <button class="icon-button cart-trigger" id="cart-open" aria-label="Open shopping cart"><i data-lucide="shopping-bag"></i><span class="cart-count" id="cart-count">0</span></button>
+        <button class="icon-button menu-trigger" id="menu-open" aria-label="Open navigation menu"><i data-lucide="menu"></i></button>
+      </div>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <div class="mobile-nav-head"><span>MENU</span><button class="icon-button" id="menu-close" aria-label="Close navigation"><i data-lucide="x"></i></button></div>
+      <nav aria-label="Mobile navigation">
+        <a href="#home">Home <i data-lucide="arrow-up-right"></i></a>
+        <a href="#products">All Products <i data-lucide="arrow-up-right"></i></a>
+        <a href="#categories">Categories <i data-lucide="arrow-up-right"></i></a>
+        <a href="#about">About Us <i data-lucide="arrow-up-right"></i></a>
+        <a href="#contact">Contact <i data-lucide="arrow-up-right"></i></a>
+      </nav>
+      <div class="mobile-nav-foot">Good tools. Good work. Good people.</div>
+    </div>
+    <div class="scrim" id="scrim"></div>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-photo" role="img" aria-label="Well-stocked hardware workshop with hand tools"></div>
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <div class="eyebrow eyebrow-light"><span></span> YOUR LOCAL HARDWARE PARTNER</div>
+          <h1>Your One-Stop Destination for <em>Quality Hardware</em></h1>
+          <p>Discover premium tools, electrical supplies, plumbing products and building materials at the best prices.</p>
+          <div class="hero-buttons"><a class="button button-orange" href="#products">Explore Products <i data-lucide="arrow-right"></i></a><a class="button button-outline" href="#contact">Contact Us</a></div>
+          <div class="hero-proof"><div class="proof-avatars"><span>R</span><span>A</span><span>M</span><b>+</b></div><div><strong>Trusted by local pros</strong><small>Good work starts here.</small></div></div>
+        </div>
+        <div class="hero-stamp"><i data-lucide="badge-check"></i><span>Quality you can<br /><strong>count on.</strong></span></div>
+        <div class="hero-index"><span>01</span><i></i><span>04</span></div>
+      </section>
+
+      <div class="service-strip">
+        <div><i data-lucide="badge-check"></i><span><strong>Genuine products</strong><small>Brands you can trust</small></span></div>
+        <div><i data-lucide="indian-rupee"></i><span><strong>Fair, honest prices</strong><small>Quality for every budget</small></span></div>
+        <div><i data-lucide="messages-square"></i><span><strong>Real people, real help</strong><small>Advice from our team</small></span></div>
+        <div><i data-lucide="truck"></i><span><strong>Convenient local delivery</strong><small>Ask about your area</small></span></div>
+      </div>
+
+      <section class="section categories-section" id="categories">
+        <div class="section-heading">
+          <div><div class="eyebrow"><span></span> FIND WHAT YOU NEED</div><h2>Shop by <em>category</em></h2></div>
+          <a class="text-link" href="#products" data-filter="all">Browse all products <i data-lucide="arrow-up-right"></i></a>
+        </div>
+        <div class="category-grid" id="category-grid"></div>
+      </section>
+
+      <section class="offer-band">
+        <div class="offer-inner">
+          <div class="offer-copy"><div class="eyebrow eyebrow-light"><span></span> THE PRO'S PICK</div><h2>Make every job<br />a <em>little easier.</em></h2><p>Get dependable tools and expert help for the work ahead.</p><a class="button button-light" href="#products">Shop bestsellers <i data-lucide="arrow-right"></i></a></div>
+          <div class="offer-art" aria-hidden="true"><div class="offer-disc"><span>BUILT<br />TO LAST</span><i data-lucide="wrench"></i></div><div class="offer-note"><i data-lucide="sparkles"></i><span>Shop local.<br /><strong>Build better.</strong></span></div></div>
+        </div>
+      </section>
+
+      <section class="section products-section" id="products">
+        <div class="section-heading product-heading">
+          <div><div class="eyebrow"><span></span> HANDPICKED FOR YOU</div><h2>Popular <em>products</em></h2></div>
+          <div class="product-controls"><span id="result-count" class="result-count"></span><label class="sort-control"><i data-lucide="arrow-down-wide-narrow"></i><select id="sort-select" aria-label="Sort products"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></label></div>
+        </div>
+        <div class="filter-row" id="filter-row" aria-label="Filter products by category"></div>
+        <div class="product-grid" id="product-grid"></div>
+        <div class="empty-state" id="empty-state" hidden><i data-lucide="package-search"></i><h3>No products found</h3><p>Try a different search or category.</p><button class="button button-dark" data-filter="all">See all products</button></div>
+        <div class="products-bottom"><span>Showing our most-loved essentials</span><a class="text-link" href="#contact">Need something specific? Ask us <i data-lucide="arrow-up-right"></i></a></div>
+      </section>
+
+      <section class="why-section">
+        <div class="section why-inner">
+          <div class="why-intro"><div class="eyebrow eyebrow-light"><span></span> THE FORGE & FIELD DIFFERENCE</div><h2>Good gear.<br /><em>Good people.</em><br />No guesswork.</h2><p>We believe the right materials make all the difference. That's why we bring together dependable products and the kind of help you'd expect from a neighbor.</p><a class="button button-outline" href="#about">Get to know us <i data-lucide="arrow-right"></i></a></div>
+          <div class="why-list">
+            <article><span class="why-number">01</span><div class="why-icon"><i data-lucide="shield-check"></i></div><div><h3>Premium quality</h3><p>Carefully chosen products that show up and do the job.</p></div></article>
+            <article><span class="why-number">02</span><div class="why-icon"><i data-lucide="badge-indian-rupee"></i></div><div><h3>Prices that feel fair</h3><p>Honest value, whether you're fixing a tap or framing a home.</p></div></article>
+            <article><span class="why-number">03</span><div class="why-icon"><i data-lucide="award"></i></div><div><h3>Genuine brands</h3><p>Trusted names and authentic products, every time.</p></div></article>
+            <article><span class="why-number">04</span><div class="why-icon"><i data-lucide="handshake"></i></div><div><h3>Here when you need us</h3><p>Friendly, practical advice from people who know the shelves.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="about-image-wrap"><img src="https://images.unsplash.com/photo-1581783898377-1c85bf937427?auto=format&fit=crop&w=1100&q=85" alt="Hand tools arranged in a workshop" loading="lazy" /><div class="about-image-label"><strong>Since day one</strong><span>Here for the makers.</span></div></div>
+        <div class="about-copy"><div class="eyebrow"><span></span> A SHOP BUILT ON TRUST</div><h2>More than a hardware store. <em>A helping hand.</em></h2><p>At Forge & Field, we know a project is personal. It could be the first shelf in a new home, a long-overdue repair or a big job with a tight deadline. Whatever brings you in, we'll help you find the right thing for the job.</p><p>We keep our shelves stocked with dependable tools and materials, and our door open to the people who build, repair and make our community what it is.</p><a class="text-link" href="#contact">Come say hello <i data-lucide="arrow-up-right"></i></a><div class="about-signoff"><span class="signoff-mark"><i data-lucide="hammer"></i></span><span><strong>Forge & Field</strong><small>Your neighborhood hardware shop</small></span></div></div>
+      </section>
+
+      <section class="reviews-section">
+        <div class="section reviews-inner">
+          <div class="section-heading"><div><div class="eyebrow"><span></span> KIND WORDS FROM OUR CUSTOMERS</div><h2>Good work gets <em>noticed.</em></h2></div><div class="review-score"><div class="stars">★★★★★</div><strong>4.9 <small>/ 5</small></strong><span>From our local community</span></div></div>
+          <div class="review-grid">
+            <article class="review-card"><div class="stars">★★★★★</div><blockquote>“They helped me find exactly the right fittings for a bathroom repair. Helpful, patient, and the price was right.”</blockquote><div class="reviewer"><span class="reviewer-avatar avatar-one">PK</span><span><strong>Pranav K.</strong><small>Homeowner</small></span><i data-lucide="quote"></i></div></article>
+            <article class="review-card"><div class="stars">★★★★★</div><blockquote>“My first stop for tools and supplies. Good range, genuine products and people who know their stuff.”</blockquote><div class="reviewer"><span class="reviewer-avatar avatar-two">SM</span><span><strong>Sandeep M.</strong><small>Local contractor</small></span><i data-lucide="quote"></i></div></article>
+            <article class="review-card"><div class="stars">★★★★★</div><blockquote>“Such a refreshing experience. They took the time to explain what I needed instead of just pointing to a shelf.”</blockquote><div class="reviewer"><span class="reviewer-avatar avatar-three">AD</span><span><strong>Anita D.</strong><small>DIY enthusiast</small></span><i data-lucide="quote"></i></div></article>
+          </div>
+          <p class="review-disclaimer">Sample reviews shown for layout preview.</p>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="section contact-inner">
+          <div class="contact-copy"><div class="eyebrow eyebrow-light"><span></span> LET'S GET TO WORK</div><h2>Have a project<br />in <em>mind?</em></h2><p>Tell us what you're working on. We'll help you find the right supplies.</p>
+            <div class="contact-details">
+              <a href="https://maps.google.com/?q=Main+Market%2C+Your+City" target="_blank" rel="noreferrer"><span><i data-lucide="map-pin"></i></span><div><small>VISIT OUR SHOP</small><strong>Shop 12, Main Market, Your City</strong></div><i class="detail-arrow" data-lucide="arrow-up-right"></i></a>
+              <a href="tel:+919876543210"><span><i data-lucide="phone"></i></span><div><small>GIVE US A CALL</small><strong>+91 98765 43210</strong></div><i class="detail-arrow" data-lucide="arrow-up-right"></i></a>
+              <a href="mailto:hello@forgeandfield.in"><span><i data-lucide="mail"></i></span><div><small>DROP US A NOTE</small><strong>hello@forgeandfield.in</strong></div><i class="detail-arrow" data-lucide="arrow-up-right"></i></a>
+              <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer"><span><i data-lucide="message-circle"></i></span><div><small>WHATSAPP US</small><strong>Quick questions welcome</strong></div><i class="detail-arrow" data-lucide="arrow-up-right"></i></a>
+            </div>
+          </div>
+          <div class="contact-right"><form id="contact-form" class="contact-form"><div class="form-heading"><span>GET IN TOUCH</span><h3>How can we help?</h3></div><div class="form-fields"><label>Your name<input name="name" type="text" placeholder="e.g. Rohan Sharma" required minlength="2" /></label><label>Email address<input name="email" type="email" placeholder="you@example.com" required /></label><label>Phone number <small>(optional)</small><input name="phone" type="tel" placeholder="+91" pattern="[+0-9 ()-]{8,18}" /></label><label>What do you need?<textarea name="message" placeholder="Tell us a little about your project..." rows="3" required minlength="8"></textarea></label></div><button class="button button-orange form-submit" type="submit">Send your enquiry <i data-lucide="arrow-up-right"></i></button><p class="form-note" id="form-note">Your email app will open with your message ready to send.</p></form>
+            <div class="map-frame"><iframe title="Map showing Main Market, Your City" src="https://maps.google.com/maps?q=Main%20Market%2C%20India&t=&z=14&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><a class="map-link" href="https://maps.google.com/?q=Main+Market%2C+Your+City" target="_blank" rel="noreferrer"><i data-lucide="map"></i> Get directions</a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand-col"><a class="brand brand-footer" href="#home"><span class="brand-mark"><i data-lucide="hammer"></i></span><span class="brand-copy"><strong>FORGE <em>&</em> FIELD</strong><small>HARDWARE & SUPPLY</small></span></a><p>Good tools. Good work.<br />Good people.</p><div class="social-links"><a href="https://instagram.com" aria-label="Instagram"><i data-lucide="camera"></i></a><a href="https://facebook.com" aria-label="Facebook"><i data-lucide="users-round"></i></a><a href="https://wa.me/919876543210" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a></div></div>
+        <div class="footer-col"><h3>EXPLORE</h3><a href="#home">Home</a><a href="#products">All Products</a><a href="#categories">Categories</a><a href="#about">About Us</a><a href="#contact">Contact</a></div>
+        <div class="footer-col"><h3>SHOP CATEGORIES</h3><a href="#products" data-filter="Hand Tools">Hand Tools</a><a href="#products" data-filter="Power Tools">Power Tools</a><a href="#products" data-filter="Electrical Items">Electrical Items</a><a href="#products" data-filter="Plumbing Supplies">Plumbing Supplies</a><a href="#products" data-filter="Safety Equipment">Safety Equipment</a></div>
+        <div class="footer-col footer-contact"><h3>COME ON IN</h3><p>Shop 12, Main Market<br />Your City, India</p><a href="tel:+919876543210">+91 98765 43210</a><a href="mailto:hello@forgeandfield.in">hello@forgeandfield.in</a><span>Mon–Sat · 9:00 AM–8:00 PM</span></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="current-year"></span> Forge & Field Hardware</span><span>Built for your next big idea.</span><a href="#home">Back to top ↑</a></div>
+    </footer>
+
+    <div class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-label="Shopping cart"><div class="drawer-head"><div><span class="drawer-kicker">YOUR SELECTION</span><h2>Shopping cart <span id="drawer-count">(0)</span></h2></div><button class="icon-button" id="cart-close" aria-label="Close cart"><i data-lucide="x"></i></button></div><div class="cart-items" id="cart-items"></div><div class="cart-empty" id="cart-empty"><i data-lucide="shopping-bag"></i><h3>Your cart is waiting.</h3><p>Find something useful for your next project.</p><button class="button button-dark" id="continue-shopping">Explore products <i data-lucide="arrow-right"></i></button></div><div class="cart-footer" id="cart-footer"><div class="cart-subtotal"><span>Estimated subtotal</span><strong id="cart-subtotal">₹0</strong></div><small>Delivery and final pricing can be confirmed with our team.</small><button class="button button-orange" id="whatsapp-order">Order on WhatsApp <i data-lucide="message-circle"></i></button><button class="continue-link" id="continue-shopping-bottom">Continue shopping</button></div></div>
+
+    <div class="product-modal" id="product-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close icon-button" id="modal-close" aria-label="Close product details"><i data-lucide="x"></i></button><div class="modal-content" id="modal-content"></div></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <a class="floating-whatsapp" href="https://wa.me/919876543210?text=Hi%20Forge%20%26%20Field%2C%20I%20have%20a%20question." target="_blank" rel="noreferrer" aria-label="Chat with us on WhatsApp"><i data-lucide="message-circle"></i><span>Chat with us</span></a>
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top"><i data-lucide="arrow-up"></i></button>
+  </body>
+</html>
